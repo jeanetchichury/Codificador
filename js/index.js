@@ -1,7 +1,18 @@
 // var str = document.querySelector('p').textContent
 // var coded = [str.charCodeAt(0), str.charCodeAt(1), str.charCodeAt(2), str.charCodeAt(3), str.charCodeAt(4), str.charCodeAt(5), str.charCodeAt(6), str.charCodeAt(7)]
 // var decoded = String.fromCharCode(coded[0], coded[1], coded[2], coded[3], coded[4], coded[5], coded[6], coded[7])
-
+var tipo = document.querySelector('#tipo')
+var valor = document.getElementsByClassName('coded')
+tipo.addEventListener('change', function (){
+    if (tipo.value != 'cifra'){
+        for (i=0;i<valor.length;i++)
+        valor[i].style.display = "none"
+        }
+    else {
+        for (i=0;i<valor.length;i++)
+        valor[i].style.display = "block"
+        }
+})
 
 var coded = ""
 function toCifra(msg, num){
@@ -35,4 +46,3 @@ function toNormal(msg, num){
     }
 return coded
 }
-// console.log(document.querySelector('#tipo').value)

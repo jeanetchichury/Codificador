@@ -3,3 +3,7 @@ form{
     display: flex;
     flex-direction: column;
 }
+
+.coded{
+    display: block;
+}
