@@ -1,4 +1,50 @@
+/* html, body{
+    width: 100%;
+    height: 100%;
+} */
+body {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-color: #f7f6f6;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+header{
+    background-color: #c7202f;
+    padding: 1em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 97.7%;
+    height: 45px;
+    background-color: #c7202f;
+    color: #fff;
+    align-items: center;
+}
+
+header > img {
+    height: 36px;
+}
+
+h1{
+    color: #fff;
+    font-size: 32px;
+}
+
+main{
+    background-color: #e7e6e6;
+    border: 2px solid #d4d4d4;
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    margin: 8%;
+    padding: 2em;
+}
+
 form{
+    font-size: 1.2rem;
     width: 200px;
     display: flex;
     flex-direction: column;
