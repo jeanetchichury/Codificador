@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     <title>A cifra de Cesar</title>
 </head>
 <body>
+    <header>
+        <img src="img/icone-de-envelope-de-coracao.png" alt="Mensagem de amor" >
+        <h1>Mande uma mensagem secreta para alguém especial!</h1>
+    </header>
     <main>
-        <p>Mande uma mensagem secreta para alguém especial!</p>
         <form action="" method="get">
             <label for="tipo">Selecione o tipo de codificação:</label>
             <select name="tipo" id="tipo">
                 <option value="cifra">Cifra de Cesar</option>
                 <option value="base64">Base64</option>
             </select>
-            <label for="decoded">Mensagem original</label>
-            <input id="decoded" type="text" name="decoded">
-            <label for="coded">Valor da codificação (valor entre 1-25)</label>
-            <select id="coded" type="text" name="coded">
-                <option value="1">1</option>
+            <label for="coded" class="coded">Valor da codificação (valor entre 1-25)</label>
+            <select id="coded" class="coded" type="text" name="coded">
+                <option value="1" selected>1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
@@ -46,9 +48,17 @@
                 <option value="24">24</option>
                 <option value="25">25</option>                
             </select>
-            <input id="code" type="radio" name="code" value="codificar" checked>codificar
-            <input id="code" type="radio" name="code" value="decodificar">decodificar
+            <label for="decoded">Mensagem</label>
+            <input id="decoded" type="text" name="decoded">
+            <label for="codedMsg">Mensagem codificada</label>
+            <input id="codedMsg" type="text" name="decoded">
+            <input id="code" type="radio" name="code" value="codificar" checked>
+            <label for="code"> codificar</label>
+            <input id="decode" type="radio" name="code" value="decodificar">
+            <label for="decode">decodificar</label>
         </form>
+        <button>Codificar mensagem!</button>
+        <!-- <p class="codeMsg">Mensagem codificada: <span id="codedMsg"></span></p> -->
     </main>
     <script src="js/index.js"></script>
 </body>
